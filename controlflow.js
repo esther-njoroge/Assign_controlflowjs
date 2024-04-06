@@ -1,20 +1,24 @@
 //  No1
 //  Write a program that takes in an array of numbers and consoles the first four items multiplied by itself  
 //  and the last two added by 10. Return the array with the new values
-numArray =[12,36,17,47,2,5,89,57,13]
-newArray = []
+let numArray =[12,36,17,47,2,5,89,57,13]
+ let newArr = []
 
 function checkArray(numbers){
     for (let i =0; i< numbers.length; i++) {
         if (i<4){
+            let ans = numbers[i]*numbers[i];
+            newArr.push(ans)
             numbers[i] *= numbers[i];
         }
         if (i>=numbers.length-2){
-            numbers[i] +=10;
+            ans = numbers[i] +10;
+            newArr.push(ans)
         }
     }
-    return numbers;
+    return newArr;
 }
+console.log(checkArray(numArray))
 
 // No2
 // Write a program that takes in the following array and use a while loop to iterate and break 
@@ -72,9 +76,9 @@ wordArray(friends)
 // No5
 // Write a JavaScript function that takes a string as input and reverses it using a while loop. The function should return the reversed string.
 function convertString(name){
-    let word = true;
-    while (word) {
-        console.log(word.split("").reverse().join(''));
+    let term = true;
+    while (term) {
+        console.log(name.split("").reverse().join(''));
         break;
 
     }
